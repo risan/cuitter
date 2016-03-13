@@ -1,0 +1,52 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  padding-top: 70px;
+}
+
+.navbar-inverse {
+  .navbar-brand {
+    font-size: 2em;
+    font-weight: 600;
+    color: #fff;
+  }
+}
+
+.jumbotron {
+  text-align: center;
+}
+
+footer {
+  font-size: 1.1em;
+  color: #777;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eaeaea;
+
+  a {
+    color: #555;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+  .credit {
+    float: left;
+  }
+
+  nav {
+    float: right;
+
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
