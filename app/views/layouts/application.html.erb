@@ -3,7 +3,7 @@
   <head>
     <%= render "layouts/head" %>
   </head>
-  <body>
+  <body class="<%= yield(:page_class) %>">
     <%= render "layouts/navbar" %>
     <div class="container">
       <%= yield %>

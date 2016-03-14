@@ -1,9 +1,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* GENERAL ELEMENTS. */
+
 body {
   padding-top: 70px;
 }
+
+/* NAVBAR. */
 
 .navbar-inverse {
   .navbar-brand {
@@ -13,9 +17,13 @@ body {
   }
 }
 
+/* JUMBOTRON. */
+
 .jumbotron {
   text-align: center;
 }
+
+/* FOOTER SECTION. */
 
 footer {
   font-size: 1.1em;
@@ -50,6 +58,8 @@ footer {
     }
   }
 }
+
+/* DEBUGGER. */
 
 .debug_dump {
   margin-top: 10px;
