@@ -1,21 +1,23 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.5'
-gem 'bcrypt'
-gem 'faker'
+gem 'bcrypt', '~> 3.1'
+gem 'faker', '~> 1.6'
+gem 'will_paginate', '~> 3.1'
 gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
-gem 'jquery-rails'
+gem 'uglifier', '>= 1.3'
+gem 'coffee-rails', '~> 4.1'
+gem 'jquery-rails', '~> 4.1'
 gem 'bootstrap-sass', '~> 3.3'
-gem 'turbolinks'
+gem 'bootstrap-will_paginate', '~> 0.0.10'
+gem 'turbolinks', '~> 2.5'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
-  gem 'sqlite3'
-  gem 'byebug'
-  gem 'spring'
+  gem 'sqlite3', '~> 1.3'
+  gem 'byebug', '~> 8.2'
+  gem 'spring', '~> 1.6'
 end
 
 group :development do
@@ -23,8 +25,8 @@ group :development do
 end
 
 group :test do
-  gem 'minitest-reporters'
-  gem 'mini_backtrace'
+  gem 'minitest-reporters', '~> 1.1'
+  gem 'mini_backtrace', '~> 0.1'
 end
 
 group :production do
