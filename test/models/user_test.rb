@@ -71,4 +71,8 @@ class UserTest < ActiveSupport::TestCase
     @user.save
     assert_equal mixed_case_email.downcase, @user.reload.email
   end
+
+  test "valid_remember_token? return false if remember_digest is nil" do
+    assert_not @user.valid_remember_token?('')
+  end
 end
