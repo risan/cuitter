@@ -2,7 +2,15 @@ foo:
   name: Foo Bar
   email: some@example.com
   password_digest: <%= User.digest("secret") %>
+
 bar:
   name: Bar Baz
   email: other@example.com
   password_digest: <%= User.digest("secret") %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name: <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest("secret") %>
+<% end %>
