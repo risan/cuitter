@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-  before_action :must_be_logged_in, only: [:index, :edit, :update]
+  before_action :must_be_logged_in, only: [:index, :edit, :update, :destroy]
   before_action :must_be_correct_user, only: [:edit, :update]
+  before_action :must_be_admin, only: :destroy
 
   def index
     @users = User.paginate(page: params[:page])
@@ -39,6 +40,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    User.find(params[:id]).destroy
+    flash[:success] = "User deleted."
+    redirect_to users_url
+  end
+
   private
 
     def user_params
@@ -51,6 +58,10 @@ class UsersController < ApplicationController
         flash[:danger] = "Please login first."
         redirect_to login_url
       end
+    end
+
+    def must_be_admin
+      redirect_to root_url unless current_user.admin?
     end
 
     def must_be_correct_user
