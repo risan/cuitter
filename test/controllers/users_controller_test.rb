@@ -6,6 +6,11 @@ class UsersControllerTest < ActionController::TestCase
     @other_user = users(:bar)
   end
 
+  test "should be redirected from index when not logged in" do
+    get :index
+    assert_redirected_to login_url
+  end
+
   test "should get new" do
     get :new
     assert_response :success

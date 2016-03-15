@@ -5,6 +5,24 @@
   }
 }
 
+/* INDEX PAGE */
+.page-users {
+  h1 {
+    text-align: center;
+  }
+
+  .users {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+  }
+}
+
 /* SETTING PAGE */
 .page-setting {
   h1 {
